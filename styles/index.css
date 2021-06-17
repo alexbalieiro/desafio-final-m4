@@ -63,6 +63,7 @@ body {
     grid-row: 1 / span 2;
     width: 380px;
     height: 480px;
+    object-fit: cover;
   }
 }
 .about-me__container,
@@ -80,6 +81,7 @@ body {
     min-height: 0px;
     padding: 0;
     margin-top: 50px;
+    gap: 0 30px;
   }
 }
 .about-me__text,
