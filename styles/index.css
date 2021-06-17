@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+.welcome {
+  background-image: url(../images/background-mobile.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  overflow: auto;
+}
+@media (min-width: 450px) {
+  .welcome {
+    background-image: url(../images/background-desktop.png);
+    background-repeat: no-repeat;
+  }
+}
+.header {
+  position: absolute;
+  width: 100%;
+}
+.welcome__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 616px;
+  color: white;
+}
+.welcome__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin: 0;
+}
+.subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0;
+}
+.about-me {
+  background-color: black;
+  color: white;
+}
+@media (min-width: 960px) {
+  .about-me {
+    background-color: white;
+    color: black;
+  }
+}
+.about-me__img {
+  display: none;
+}
+@media (min-width: 960px) {
+  .about-me__img {
+    display: inherit;
+    margin-left: auto;
+    grid-column-start: 1;
+    grid-row: 1 / span 2;
+    width: 380px;
+    height: 480px;
+  }
+}
+.about-me__container,
+.services__container {
+  padding: 60px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 616px;
+}
+@media (min-width: 960px) {
+  .about-me__container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    min-height: 0px;
+    padding: 0;
+    margin-top: 50px;
+  }
+}
+.about-me__text,
+.services__card {
+  padding: 50px 0;
+}
+@media (min-width: 960px) {
+  .about-me__container > .subtitle {
+    align-self: end;
+  }
+  .about-me__text {
+    max-width: 700px;
+    padding: 0 100px 0 0;
+    margin: 0;
+  }
+}
+.services {
+  background-color: #fafafa;
+}
+.services__content {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 960px) {
+  .services__content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 70px;
+  }
+}
+.services__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 20px;
+}
+@media (min-width: 960px) {
+  .services__card {
+    width: 400px;
+  }
+}
+.services__img {
+  width: 138px;
+  height: 128px;
+}
+.services__card-title {
+  margin: 0;
+}
+.services__card-text {
+  text-align: center;
+}
+.contact {
+  background-color: black;
+  color: white;
+}
+.footer {
+  background-color: #2c2c2c;
+}
