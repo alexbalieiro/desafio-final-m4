@@ -8,7 +8,7 @@ function addPortfolioCard(params) {
     params.description;
   template.content.querySelector(".portfolio-card-link").href = params.url;
   template.content.querySelector(".portfolio-card-link").textContent =
-    params.url;
+    params.descriptionlink;
 
   const clone = document.importNode(template.content, true);
   container.appendChild(clone);
@@ -27,6 +27,7 @@ function getPortfolio() {
           description: item.fields.description,
           image: item.fields.imgurl,
           url: item.fields.url,
+          descriptionlink: item.fields.descriptionlink,
         };
       });
       return fieldsCollections;
