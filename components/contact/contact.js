@@ -38,5 +38,8 @@ function conctactComponent(el) {
       }),
     });
     alert("El mensaje fue enviado");
+    name.value = "";
+    email.value = "";
+    text.value = "";
   });
 }
