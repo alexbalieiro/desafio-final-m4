@@ -1,13 +1,13 @@
 function addPortfolioCard(params) {
-  const template = document.querySelector("#porfolio-card-template");
+  const template = document.querySelector("#portfolio-card-template");
   const container = document.querySelector(".portfolio-content");
   template.content.querySelector(".portfolio-img").src = params.image;
   template.content.querySelector(".portfolio-card-title").textContent =
     params.title;
   template.content.querySelector(".portfolio-card-text").textContent =
     params.description;
-  template.content.querySelector(".porfolio-card-link").href = params.url;
-  template.content.querySelector(".porfolio-card-link").textContent =
+  template.content.querySelector(".portfolio-card-link").href = params.url;
+  template.content.querySelector(".portfolio-card-link").textContent =
     params.url;
 
   const clone = document.importNode(template.content, true);
