@@ -2,7 +2,7 @@ function headerComponent(el) {
   const componentEl = document.createElement("div");
   componentEl.innerHTML = `
   <div class="header__container">
-  <a class="header__logo" href="/">ALEX</a>
+  <a class="header__logo" href="./">ALEX</a>
   <div class="header__menu">
     <div class="header__hamburguer">
       <div class="header__hamburguer-rectangulo"></div>
