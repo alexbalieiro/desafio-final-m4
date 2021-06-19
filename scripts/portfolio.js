@@ -22,16 +22,24 @@ function getPortfolio() {
     })
     .then((data) => {
       const fieldsCollections = data.items.map((item) => {
+        const image = buscarAsset(item.fields.image.sys.id, data);
+        const imgUrl = image.fields.file.url;
         return {
           title: item.fields.title,
           description: item.fields.description,
-          image: item.fields.imgurl,
+          image: imgUrl,
           url: item.fields.url,
           descriptionlink: item.fields.descriptionlink,
         };
       });
       return fieldsCollections;
     });
+}
+function buscarAsset(id, data) {
+  const imgEncontrado = data.includes.Asset.find((img) => {
+    return img.sys.id == id;
+  });
+  return imgEncontrado;
 }
 function main() {
   headerComponent(document.querySelector(".header"));
