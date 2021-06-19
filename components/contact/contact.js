@@ -29,17 +29,19 @@ function conctactComponent(el) {
   const text = form[2];
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    fetch("https://apx-api.vercel.app/api/utils/dwf", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({
-        to: email.value,
-        message: "Hola, soy " + name.value + " " + text.value,
-      }),
-    });
-    alert("El mensaje fue enviado");
-    name.value = "";
-    email.value = "";
-    text.value = "";
+    if (email.value == "" || name.value == "" || text.value == "") {
+      alert("Faltan campos por rellenar");
+    } else {
+      fetch("https://apx-api.vercel.app/api/utils/dwf", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          to: email.value,
+          message: "Hola, soy " + name.value + " " + text.value,
+        }),
+      });
+      alert("El mensaje fue enviado");
+      (name.value = ""), (email.value = ""), (text.value = "");
+    }
   });
 }
